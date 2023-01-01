@@ -1,0 +1,22 @@
+{% extends 'myfood/base.html' %}
+
+{% block content %}
+<form method="POST">
+{% csrf_token %}
+<label for="">Item name</label>
+{{form.item_name}}<br><br>
+
+<label for="">Item price</label>
+{{form.item_price}}<br><br>
+
+<label for="">Item desc</label>
+{{form.item_desc}}<br><br>
+
+<label for="">Item image</label>
+{{form.item_image}}<br><br>
+
+
+<button type="submit">Add</button>
+</form>
+
+{% endblock %}
